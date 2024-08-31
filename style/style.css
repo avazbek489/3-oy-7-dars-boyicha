@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.text-overflow {
+    text-align: center;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-overflow-skip .text-overflow {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+video, audio {
+    display: block;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.video-example1 video, .video-example2 video {
+    border: 2px solid #00796b;
+    border-radius: 10px;
+}
+
+.audio-example1 audio, .audio-example2 audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.switch {
+    position: relative;
+    width: 80px;
+    height: 40px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switcher {
+    position: relative;
+}
+
+.slider-span::before {
+top: 2px;
+}
+.slider {
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+    background-color: #ddd;
+    transition: 0.4s;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switch-x + .slider::before {
+    transform: translateX(2px);
+}
+
+.switch-x:checked + .slider::before {
+    transform: translateX(42px);
+}
+
+.switch-y {
+    height: 80px;
+    width: 40px;
+}
+
+.switch-y .slider {
+    width: 100%;
+    height: 100%;
+}
+
+.switch-y .slider::before {
+    top: 2px;
+    left: 2px;
+    transform: translateY(0);
+}
+
+.switch-y input:checked + .slider::before {
+    transform: translateY(40px);
+}
+
+.switch input:checked + .slider {
+    background-color: blue;
+}
+
+
+.mask1 {
+    -webkit-mask-image: url(../images/Star\ 4.svg);
+    mask-image: url(../images/Star\ 4.svg);
+    mask-repeat: no-repeat;    
+  }
